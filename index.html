@@ -265,6 +265,30 @@
   .about-text p{ color:var(--muted); margin-bottom:16px; max-width:60ch; }
   .about-text strong{ color:var(--text); }
 
+  .profile-photo-wrap{
+    display:flex; justify-content:center; align-items:center;
+    margin-bottom:22px;
+  }
+  @keyframes auraPulse{
+    0%, 100% {
+      box-shadow:0 0 0 6px rgba(47,227,255,0.16), 0 0 18px rgba(47,227,255,0.55), 0 0 38px rgba(123,47,247,0.42), 0 0 70px rgba(123,47,247,0.26), 0 25px 60px rgba(17,20,35,0.75);
+      transform:scale(1);
+    }
+    50% {
+      box-shadow:0 0 0 8px rgba(47,227,255,0.24), 0 0 28px rgba(47,227,255,0.8), 0 0 54px rgba(123,47,247,0.6), 0 0 90px rgba(123,47,247,0.32), 0 25px 60px rgba(17,20,35,0.75);
+      transform:scale(1.02);
+    }
+  }
+  .profile-photo{
+    width:min(300px, 72vw);
+    aspect-ratio:1;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid rgba(47,227,255,0.9);
+    background:rgba(255,255,255,0.04);
+    animation:auraPulse 2.8s ease-in-out infinite;
+  }
+
   .stat-card{
     border:1px solid var(--line);
     background:var(--panel);
@@ -293,7 +317,7 @@
     background:var(--panel);
     border-radius:16px;
     padding:26px;
-    position:relative;
+    position:relative;Senio
     overflow:hidden;
     transition:transform .3s ease, border-color .3s ease;
   }
@@ -487,6 +511,9 @@
         </p>
       </div>
       <div class="reveal">
+        <div class="profile-photo-wrap">
+          <img class="profile-photo" src="a4b97248-b175-4fa3-a8ae-ae342f6e52f5.jpeg" alt="Rener Llander Hanayon portrait">
+        </div>
         <div class="stat-card">
           <div class="label">Course</div>
           <div class="value">BS Information Technology</div>
@@ -553,7 +580,7 @@
       <div class="tl-item reveal">
         <h3>Senior High School</h3>
         <div class="meta">Angas Integrated School</div>
-        <p>Technical-Vocational-Livelihood here.</p>
+        <p>Technical-Vocational-Livelihood</p>
       </div>
     </div>
   </section>
@@ -607,7 +634,7 @@
       </p>
       <div class="contact-methods">
         <a href="mailto:your.email@example.com" class="btn primary">Email Me</a>
-        <a href="https://github.com/yourusername" target="_blank" rel="noopener" class="btn ghost">GitHub</a>
+        <a href="https://github.com/YoungGodCaesar" target="_blank" rel="noopener" class="btn ghost">GitHub</a>
         <a href="https://www.linkedin.com/in/yourusername" target="_blank" rel="noopener" class="btn ghost">LinkedIn</a>
       </div>
     </div>
