@@ -207,7 +207,10 @@
     background:
       repeating-linear-gradient(45deg, rgba(234,243,255,0.04) 0px, rgba(234,243,255,0.04) 1px, transparent 1px, transparent 10px),
       var(--blueprint-panel);
-    font-family:var(--font-mono); font-size:11px; color:var(--muted); text-align:center; padding:20px; letter-spacing:0.05em;
+    overflow:hidden;
+  }
+  .id-card .id-photo img{
+    width:100%; height:100%; object-fit:cover; display:block;
   }
   .id-card .id-photo .mono{ font-family:var(--font-display); font-size:2.6rem; color:var(--amber); font-weight:800; display:block; margin-bottom:8px; }
   .id-field{ display:flex; border-top:1px solid var(--line); }
@@ -244,6 +247,16 @@
   @media (max-width:600px){
     .rev-row{ grid-template-columns:52px 1fr; }
     .rev-row .rev-cell:nth-child(3){ grid-column:1/3; border-left:none; border-top:1px solid var(--line); }
+  }
+
+  @media (max-width:600px){
+    .hero{ padding-top:140px; }
+    .hero-top{ align-items:stretch; }
+    .title-block{ width:100%; min-width:0; }
+    .id-card .id-photo{ aspect-ratio:4/3; }
+    .id-field{ display:block; }
+    .id-field .k, .id-field .v{ width:100%; border-right:none; display:block; }
+    .id-field .k{ border-bottom:1px solid var(--line); }
   }
 
   /* ---------- projects (drawing sheets) ---------- */
@@ -388,10 +401,7 @@
       </div>
       <div class="id-card reveal">
         <div class="id-photo">
-          <div>
-            <span class="mono">RLH</span>
-            Portrait pending —<br>swap this panel for your photo
-          </div>
+          <img src="a4b97248-b175-4fa3-a8ae-ae342f6e52f5.jpeg" alt="Rener Llander Hanayon profile photo">
         </div>
         <div class="id-field"><div class="k">Course</div><div class="v">BS Information Technology</div></div>
         <div class="id-field"><div class="k">School</div><div class="v">Garcia College of Technology</div></div>
